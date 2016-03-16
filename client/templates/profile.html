@@ -1,10 +1,61 @@
 <ion-view view-title="Profil">
   <ion-content>
-    <div id="profile">
-      <div id="profile-info">
-        <img class="circular-img" src="{{user.image_url}}">
-        <h3 id="profile-name">{{user.first_name}}</h3>
-        <span id="profile-description">{{user.description}}</span>
+    <div class="ui one column grid">
+      <div class="column">
+        <div class="ui fluid card" id="user-card">
+          <a class="image" href="#">
+            <img src="{{user.image_url}}">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Marvin Minsky</a>
+            <h3 class="ui sub header">
+              Oversikt over din aktivitet
+            </h3>
+            <div class="description">
+              <div class="ui one column grid">
+                <div class="sixteen wide centered column">
+
+                  <div class="ui tiny horizontal statistics">
+                    <div class="center statistic">
+                      <div class="value">
+                        {{user.activity.daily_step_count}}
+                      </div>
+                      <div class="label">
+                        skritt i dag
+                      </div>
+                    </div>
+
+                    <div class="center statistic">
+                      <div class="value">
+                        {{daily_step_percent | percent:0}}
+                      </div>
+                      <div class="label">
+                        av daglig mål
+                      </div>
+                    </div>
+                    <div class="center statistic">
+                      <div class="value">
+                        {{user.activity.weekly_step_count}}
+                      </div>
+                      <div class="label">
+                        skritt denne uken
+                      </div>
+                    </div>
+                    <div class="center statistic">
+                      <div class="value">
+                        {{weekly_step_percent | percent:0}}
+                      </div>
+                      <div class="label">
+                        av ukentlig mål
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </ion-content>

@@ -1,62 +1,10 @@
-#profile {
-  position: relative;
-  margin-top: 7.5em;
-  background-color: white;
-  padding-top: 200px;
-}
-.circular-img {
-  border-radius: 50%;
-  height: 128px;
-  width: 128px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-}
-#profile-info {
-  position: absolute;
-  top: -95px;
-  width: 100%;
-  z-index: 2;
-  text-align: center;
-}
-#profile-name {
-  color: #444;
-  font-size: 26px;
-}
-#profile-description {
-  font-size: 15px;
-  color: #888;
-}
-#profile-description a {
-  color: #888;
-}
-.list-item-content {
-  padding: 5px;
-}
-.list-item {
-  color: #666666;
-}
-.post {
-  color: #444;
-}
-.post-time {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  font-size: 11px;
-  color: #888;
-}
-.post-profile-image {
-  display: inline-block;
-  vertical-align: top;
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-}
-.post-options {
-  position: absolute;
-  font-size: 16px;
-  right: 5px;
-  bottom: 5px;
-  color: #888;
+#user-card{
+
+  .statistic {
+    margin-top: 1.5em !important;
+  }
+  .center.statistic {
+    margin: 0 auto;
+  }
+
 }

@@ -1,5 +1,11 @@
-<ion-view view-title="Profile">
+<ion-view view-title="Profil">
   <ion-content>
-
+    <div id="profile">
+      <div id="profile-info">
+        <img class="circular-img" src="{{user.image_url}}">
+        <h3 id="profile-name">{{user.first_name}}</h3>
+        <span id="profile-description">{{user.description}}</span>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

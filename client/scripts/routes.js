@@ -9,6 +9,15 @@ function config($stateProvider, $urlRouterProvider) {
       abstract: true,
       templateUrl: 'client/templates/tabs.html'
     })
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'client/templates/home.html',
+          controller: 'HomeCtrl as home'
+        }
+      }
+    })
     .state('tab.profile', {
       url: '/profile',
       views: {
@@ -17,7 +26,25 @@ function config($stateProvider, $urlRouterProvider) {
           controller: 'ProfileCtrl as profile'
         }
       }
-    });
+    })
+    .state('tab.activities', {
+      url: '/activities',
+      views: {
+        'tab-activities': {
+          templateUrl: 'client/templates/activity.html',
+          controller: 'ActivityCtrl as activity'
+        }
+      }
+    })
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-settings': {
+          templateUrl: 'client/templates/settings.html',
+          controller: 'SettingsCtrl as settings'
+        }
+      }
+    })
 
   $urlRouterProvider.otherwise('tab/profile');
 }

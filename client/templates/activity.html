@@ -1,29 +1,33 @@
 <ion-view view-title="Aktiviteter">
   <ion-content>
-
+    <div class="ui container activity">
     <div class="list card">
-
-      <a href="#" class="item item-icon-left">
-        <i class="icon fa fa-heart"></i>
-        Supertrening #1
-      </a>
-
-      <a href="#" class="item item-icon-left">
-        <i class="icon fa fa-heart"></i>
-        Supertrening #2
-      </a>
-
-      <a href="#" class="item item-icon-left">
-        <i class="icon fa fa-heart"></i>
-        Supertrening #3
-      </a>
-
-      <a href="#" class="item item-icon-left">
-        <i class="icon fa fa-heart"></i>
-        Supertrening #4
-      </a>
-
+      <div class="ui styled fluid accordion">
+        <div ng-repeat="activity in activities">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          {{activity.title}}
+        </div>
+        <div class="content">
+          <p class="transition hidden">
+            {{activity.description}} <br/>
+          </p>
+          <div class="ui list" ng-repeat="exercise in activity.exercises">
+            <div class="item"><i class="treatment icon"></i>
+              <div class="content">
+                <div class="header">
+                {{exercise.repetitions}} x {{exercise.title}}
+              </div>
+              <div class="description">
+                {{exercise.description}}
+              </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+    </div>
+    </div>
   </ion-content>
 </ion-view>

@@ -10,3 +10,6 @@ settings.json
 
 # general swp files from vim
 *.swp
+
+#app icon psd file
+app_icon.psd

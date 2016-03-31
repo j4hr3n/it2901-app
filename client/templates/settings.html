@@ -1,9 +1,47 @@
 <ion-view view-title="Innstillinger">
   <ion-content>
-    <div class="list">
+    <div class="ui container settings">
+      <div class="list">
+        <h1 class="ui center aligned header">Hvordan endre instillinger?</h1>
+        <div class="ui one column centered grid">
+          <div class="column">
+            <div class="ui center aligned segment">
+              <div class="ui small ordered steps">
+                <div class="active step">
+                  <div class="content">
+                    <div class="title">Endre instillingene her</div>
+                  </div>
+                </div>
+                <div class="active step">
+                  <div class="content">
+                    <div class="title">Så oppdateres appen automagisk</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui divider"></div>
+        <h1 class="ui center aligned header">Togglbare instillinger</h1>
         <ion-toggle>
-          Toggle me
+          Toggle meg
         </ion-toggle>
+        <ion-toggle>
+          Her vil det komme instillinger
+        </ion-toggle>
+        <ion-toggle>
+          De kan ofte toggles
+        </ion-toggle>
+        <div class="ui divider"></div>
+        <h1 class="ui center aligned header">Eller kanskje tweakes som under?</h1>
+        <div class="list">
+          <div class="item range range-positive">
+            <i class="icon ion-ios-sunny-outline"></i>
+            <input type="range" name="volume" min="0" max="100" value="33">
+            <i class="icon ion-ios-sunny"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>

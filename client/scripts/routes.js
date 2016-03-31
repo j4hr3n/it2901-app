@@ -4,6 +4,15 @@ angular
 
 function config($stateProvider, $urlRouterProvider) {
   $stateProvider
+    .state('noauth', {
+      url: '/',
+      templateUrl: 'client/templates/noauth.html'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'client/templates/register.html',
+      controller: 'RegisterCtrl as register'
+    })
     .state('tab', {
       url: '/tab',
       abstract: true,
@@ -46,5 +55,5 @@ function config($stateProvider, $urlRouterProvider) {
       }
     })
 
-  $urlRouterProvider.otherwise('tab/profile');
+  $urlRouterProvider.otherwise('/');
 }

@@ -1,9 +1,16 @@
-<ion-view view-title="NoAuth">
+<ion-view view-title="NoAuth" class="noauth">
   <ion-content>
-    <div class="ui container">
-      <h1 class="ui center aligned header">No auth state</h1>
-      <button class="ui button" ui-sref="tab.home">Logg inn</button>
-      <button class="ui button" ui-sref="register">Registrer meg</button>
-    </div>
+    <div class="ui container noauth">
+      <h1 class="ui center aligned header">NoAuth state</h1>
+        <div class="ui grid">
+          <div class="ui centered row">
+            Dette er staten som vises når man ikke er autentisert.
+          </div>
+        <div class="ui centered row">
+          <button class="ui button" ui-sref="tab.home">Logg inn</button>
+          <button class="ui button" ui-sref="register">Registrer meg</button>
+        </div>
+        </div>
+      </div>
   </ion-content>
 </ion-view>

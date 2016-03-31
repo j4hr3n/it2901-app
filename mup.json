@@ -1,8 +1,8 @@
 {
   "servers": [{
     "host": "46.101.53.156",
-    "username": "jahren",
-    "pem": "~/.ssh/id_rsa"
+    "username": "mup-deploy",
+    "pem": "public/deploy/mupdeploy"
   }],
 
   "setupMongo": false,

@@ -1,10 +1,26 @@
-#user-card{
+.profile {
+  #user-card {
+    .statistic {
+      margin-top: 1.5em !important;
+    }
+    .center.statistic {
+      margin: 0 auto;
+    }
 
-  .statistic {
-    margin-top: 1.5em !important;
-  }
-  .center.statistic {
-    margin: 0 auto;
+    .ui.fluid.button{
+      margin-top:0.5em;
+    }
+
+    .ui.sub.header{
+      margin-top: 0.75em;
+    }
   }
 
+
+  // Tablet styling
+  @media only screen and (min-width: 725px){
+    #user-card{
+      width: 60% !important;
+    }
+  }
 }

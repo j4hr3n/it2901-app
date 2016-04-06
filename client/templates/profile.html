@@ -1,13 +1,16 @@
-<ion-view view-title="Profil">
+<ion-view view-title="Profil" class="profile">
   <ion-content>
     <div class="ui one column grid">
       <div class="column">
-        <div class="ui fluid card" id="user-card">
-          <a class="image" href="#">
-            <img src="{{user.image_url}}">
+        <div class="ui centered fluid card" id="user-card">
+          <a class="image" ng-click="addProfilePhoto()">
+            <img src="{{user.image_url}}" id="profile-image">
           </a>
           <div class="content">
-            <a class="header" href="#">Marvin Minsky</a>
+            <a class="header" href="#">{{user.full_name}}</a>
+            <div class="meta">
+              <span class="date">{{user.date_of_birth}}</span>
+            </div>
             <h3 class="ui sub header">
               Oversikt over din aktivitet
             </h3>
@@ -50,6 +53,7 @@
                       </div>
                     </div>
                   </div>
+                  <button class="fluid ui button">Rediger profil</button>
 
                 </div>
               </div>

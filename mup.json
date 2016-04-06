@@ -1,8 +1,8 @@
 {
   "servers": [{
     "host": "46.101.53.156",
-    "username": "mup-deploy",
-    "pem": "public/deploy/mupdeploy"
+    "username": "jahren",
+    "pem": "~/.ssh/id_rsa"
   }],
 
   "setupMongo": false,
@@ -20,7 +20,7 @@
 
   "env": {
     "ROOT_URL": "http://46.101.53.156",
-    "PORT": 8002
+    "PORT": 8003
   },
 
   "deployCheckWaitTime": 15

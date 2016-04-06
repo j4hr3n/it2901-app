@@ -60,13 +60,13 @@ function echo_if {
 
 # ============================================== Functions
 
-if [ $(program_is_installed node) == 1 ] && [ $(program_is_installed npm) == 1 ] && [ $(program_is_installed mup) == 1 ]; then
+if [ $(program_is_installed node) == 1 ] && [ $(program_is_installed npm) == 1 ] && [ $(program_is_installed mupx) == 1 ]; then
 	echo All dependencies installed, initializing build
 	echo "Are you sure you are ready to build? (yes [y]/no [n])"
 	read str
 	if [ $str == 'yes' ] || [ $str == 'y' ] ; then
-    mup setup
-		mup deploy
+    mupx setup
+		mupx deploy
     echo build finished
 	else
 		echo build interrupted
@@ -75,5 +75,5 @@ else
 	# command line programs
 	echo "node        $(echo_if $(program_is_installed node))"
 	echo "npm         $(echo_if $(program_is_installed npm))"
-	echo "mup         $(echo_if $(program_is_installed mup))"
+	echo "mup         $(echo_if $(program_is_installed mupx))"
 fi

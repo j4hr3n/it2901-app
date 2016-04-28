@@ -1,0 +1,210 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "55ed5820c03dab899179926cae9d856ad66e5aee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/55ed5820c03dab899179926cae9d856ad66e5aee.js?meteor_js_resource=true",
+      "size": 1519161,
+      "hash": "55ed5820c03dab899179926cae9d856ad66e5aee"
+    },
+    {
+      "path": "a96bea0ef087199cf379a6131b249875a3c684ed.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/a96bea0ef087199cf379a6131b249875a3c684ed.css?meteor_css_resource=true",
+      "size": 213460,
+      "hash": "a96bea0ef087199cf379a6131b249875a3c684ed"
+    },
+    {
+      "path": "ecbe510666ccb088205194ba6cd45c4361c8650e.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/ecbe510666ccb088205194ba6cd45c4361c8650e.css?meteor_css_resource=true",
+      "size": 237664,
+      "hash": "ecbe510666ccb088205194ba6cd45c4361c8650e"
+    },
+    {
+      "path": "8470b8bba0f0e6fb23fd7c49574f862f853f89e2.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/8470b8bba0f0e6fb23fd7c49574f862f853f89e2.css?meteor_css_resource=true",
+      "size": 330511,
+      "hash": "8470b8bba0f0e6fb23fd7c49574f862f853f89e2"
+    },
+    {
+      "path": "packages/driftyco_ionic/release/fonts/ionicons.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/driftyco_ionic/release/fonts/ionicons.eot",
+      "size": 120724,
+      "hash": "61532e89e212f8dd16ba31f3ebcf35c0a7334035"
+    },
+    {
+      "path": "packages/driftyco_ionic/release/fonts/ionicons.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/driftyco_ionic/release/fonts/ionicons.svg",
+      "size": 333834,
+      "hash": "3f1ca28fcb042d2bcc6ee6a4e3dd817e5132eeea"
+    },
+    {
+      "path": "packages/driftyco_ionic/release/fonts/ionicons.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/driftyco_ionic/release/fonts/ionicons.ttf",
+      "size": 188508,
+      "hash": "1b0a0de084905946a20300ca8c354865dec46764"
+    },
+    {
+      "path": "packages/driftyco_ionic/release/fonts/ionicons.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/driftyco_ionic/release/fonts/ionicons.woff",
+      "size": 67904,
+      "hash": "e46819e863a46751d622c1190c4e8a83ebc20612"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.eot",
+      "size": 70807,
+      "hash": "986eed8dca049714e43eeebcb3932741a4bec76d"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.svg",
+      "size": 365616,
+      "hash": "b06b5c8f67fd632cdc62a33b62ae4f74194131b3"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.ttf",
+      "size": 142072,
+      "hash": "6484f1af6b485d5096b71b344e67f4164c33dd1f"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff",
+      "size": 83588,
+      "hash": "4a313eb93b959cc4154c684b915b0a31ddb68d84"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff2",
+      "size": 66624,
+      "hash": "638c652d623280a58144f93e7b552c66d1667a11"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/FontAwesome.otf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/FontAwesome.otf",
+      "size": 109688,
+      "hash": "42c179eef588854b5ec151bcf6a3f58aa8b79b11"
+    },
+    {
+      "path": "app/deploy/mupdeploy",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/deploy/mupdeploy",
+      "size": 1679,
+      "hash": "6da982bb016415ac9e89ed5c5061da0175e93adf"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/fonts/icons.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/fonts/icons.eot",
+      "size": 60767,
+      "hash": "3e63fc9b3de4580f1f3bec0631436f755b80f167"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/fonts/icons.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/fonts/icons.svg",
+      "size": 313398,
+      "hash": "26bb1c5ef100a1cd71923f1d5dc29fc797ef4639"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/fonts/icons.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/fonts/icons.ttf",
+      "size": 122092,
+      "hash": "9088143b19979779b2116cef38b661f72d982e19"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/fonts/icons.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/fonts/icons.woff",
+      "size": 71508,
+      "hash": "56ce13e71c2150d81bc972940584915181bd6081"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/fonts/icons.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/fonts/icons.woff2",
+      "size": 56780,
+      "hash": "1075231650f579955905bb2f6527148a8e2b4b16"
+    },
+    {
+      "path": "app/lib/semantic-ui/src/themes/default/assets/images/flags.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/lib/semantic-ui/src/themes/default/assets/images/flags.png",
+      "size": 28123,
+      "hash": "4a552ecb123ded5040ddda01d626103cc65db055"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "83cad0ebb1ce1006221bef0a53da58a01b438e4b"
+    },
+    {
+      "path": "body.html",
+      "where": "internal",
+      "type": "body",
+      "hash": "80c5ad3ec2af088413b24ff108f8c688e83c3d08"
+    }
+  ],
+  "cordovaCompatibilityVersions": {
+    "android": "37830bd627407099edf6e82626b5ee76c1d08942",
+    "ios": "0bb343f8db20e176c4025e3672f7dbaf3e58c8d2"
+  }
+}

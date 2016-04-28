@@ -1,3 +1,12 @@
+$wet-asphalt: #34495e;
+
 .noauth{
-  background-color: plum;
+  background-color: $wet-asphalt;
+  .ui.container{
+    color: white;
+  }
+  .ui.header{
+    color: white;
+    margin-top: 0.5em;
+  }
 }

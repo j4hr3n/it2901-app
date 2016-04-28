@@ -2,9 +2,19 @@ angular
 	.module('it2901')
 	.controller('ProfileCtrl', ProfileCtrl);
 
-function ProfileCtrl($scope, $reactive, $cordovaCamera, $cordovaDialogs) {
+function ProfileCtrl($scope, $reactive, $ionicActionSheet, $cordovaCamera,
+	$cordovaDialogs, $state) {
 	$reactive(this).attach($scope);
 
+
+	$scope.editing = false;
+
+	$scope.edit = function() {
+		console.log("Edit now")
+		$scope.editing = true;
+		$state.go("tab.profile.edit");
+		document.getElementById('edit').scrollIntoView();
+	}
 
 	$scope.addProfilePhoto = function() {
 		if (Meteor.isCordova) {
@@ -16,7 +26,9 @@ function ProfileCtrl($scope, $reactive, $cordovaCamera, $cordovaDialogs) {
 				}],
 				destructiveText: 'Slett mitt nåverende profilbilde',
 				destructiveButtonClicked: function() {
-					$cordovaDialogs.confirm('message', 'title', ['Avbryt', 'Slett bilde'])
+					$cordovaDialogs.confirm(
+							'Dette vil føre til at ditt profilbilde blir slettet for godt',
+							'Er du sikker?', ['Avbryt', 'Slett bilde'])
 						.then(function(buttonIndex) {
 							// no button = 0, 'OK' = 1, 'Cancel' = 2
 							if (buttonIndex == 1) {
@@ -41,8 +53,8 @@ function ProfileCtrl($scope, $reactive, $cordovaCamera, $cordovaDialogs) {
 				sourceType: Camera.PictureSourceType.CAMERA,
 				allowEdit: true,
 				encodingType: Camera.EncodingType.JPEG,
-				targetWidth: 100,
-				targetHeight: 100,
+				targetWidth: 500,
+				targetHeight: 500,
 				popoverOptions: CameraPopoverOptions,
 				saveToPhotoAlbum: false,
 				correctOrientation: true

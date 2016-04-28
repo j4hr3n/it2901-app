@@ -1,0 +1,18 @@
+.login {
+  //Hide date input defaults
+  input::-webkit-datetime-edit,
+  input::-webkit-clear-button,
+  input::-webkit-inner-spin-button,
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  span.hackish-label {
+    color: #aaaaaa;
+    position: fixed;
+    margin-top: -2em;
+    font-size: 14px;
+  }
+  .ui.container{
+    margin-top:0.5em;
+  }
+}

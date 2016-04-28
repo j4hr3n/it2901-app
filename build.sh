@@ -65,8 +65,8 @@ if [ $(program_is_installed node) == 1 ] && [ $(program_is_installed npm) == 1 ]
 	echo "Are you sure you are ready to build? (yes [y]/no [n])"
 	read str
 	if [ $str == 'yes' ] || [ $str == 'y' ] ; then
-    mupx setup
-		mupx deploy
+    mup setup
+		mup deploy
     echo build finished
 	else
 		echo build interrupted

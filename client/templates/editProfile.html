@@ -1,0 +1,22 @@
+  <div id="edit" class="ui container">
+    <form class="ui form" name="edit-form">
+      <div class="field">
+        <label>Fornavn</label>
+        <input type="text" ng-model="edit.first_name" placeholder="Ola">
+      </div>
+      <div class="field">
+        <label>Etternavn</label>
+        <input type="text" ng-model="edit.last_name" placeholder="Nordmann">
+      </div>
+      <div class="field">
+        <label>Epost</label>
+        <input type="email" ng-model="edit.email" placeholder="Ola.Nordmann@eksempel.no">
+      </div>
+      <div class="field">
+        <label>Telefonnummer</label>
+        <input type="tel" ng-model="edit.phone" placeholder="12345678">
+      </div>
+      <button class="ui button" type="submit"><i class="fa fa-times"></i> Avbryt</button>
+      <button class="ui button" type="submit"><i class="fa fa-floppy-o"></i> Lagre</button>
+    </form>
+  </div>

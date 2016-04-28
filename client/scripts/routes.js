@@ -8,6 +8,11 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'client/templates/noauth.html'
     })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'client/templates/login.html',
+      controller: 'LoginCtrl as login'
+    })
     .state('register', {
       url: '/register',
       templateUrl: 'client/templates/register.html',
@@ -35,6 +40,11 @@ function config($stateProvider, $urlRouterProvider) {
           controller: 'ProfileCtrl as profile'
         }
       }
+    })
+    .state('tab.profile.edit', {
+      url: '/edit',
+      templateUrl: 'client/templates/editProfile.html',
+      controller: 'ProfileCtrl as profile'
     })
     .state('tab.activities', {
       url: '/activities',

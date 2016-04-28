@@ -1,8 +1,31 @@
-<ion-view view-title="Register">
+<ion-view view-title="Registrer deg" class="register">
   <ion-content>
-    <div class="ui container">
-      <h1 class="ui center aligned header">Register state</h1>
-      <button class="ui button" ui-sref="tab.home">Logg inn</button>
+    <div class="ui container register">
+      <h1 class="ui center aligned header">Registrer deg i appen</h1>
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Navn</span>
+          <input type="text" ng-model="register.name" placeholder="Navn">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Epost</span>
+          <input type="email" ng-model="register.email" placeholder="Epost">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Telefonnummer</span>
+          <input type="tel" ng-model="register.tel" placeholder="Telfonnummer">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Fødselsdato</span>
+          <input type="date" ng-model="register.dob" ng-click="dateClicked()" placeholder="Fødselsdato">
+          <span class="hackish-label" ng-show="dateIsClicked == false">Fødselsdato</span>
+        </label>
+      </div>
+      <div class="ui grid">
+        <div class="ui centered row">
+          <button class="ui fluid button" ng-click="register()">Logg inn</button>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>

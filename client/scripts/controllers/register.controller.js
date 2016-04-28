@@ -5,4 +5,10 @@ angular
 function RegisterCtrl($scope, $reactive) {
   $reactive(this).attach($scope);
 
+  $scope.dateIsClicked = false;
+  $scope.user;
+
+  $scope.register = function() {
+    $scope.user
+  }
 }

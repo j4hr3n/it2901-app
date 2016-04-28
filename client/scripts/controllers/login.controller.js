@@ -10,6 +10,11 @@ function LoginCtrl($scope, $reactive, $location, LoginService, $state) {
       this.credentials.username, this.credentials.password, (err) => {
 
         if (err) {
+          swal({
+            title: "Vi klarte ikke å logge deg inn",
+            text: "Du har mest sannsynlig tastet noe feil, prøv gjerne igjen.",
+            type: "error"
+          })
           console.log("Login failed with error --> " + err);
         } else {
           console.log("Login successfull");

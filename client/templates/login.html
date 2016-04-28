@@ -2,6 +2,11 @@
   <ion-content>
     <div class="ui container login" ng-controller="LoginCtrl as login">
       <h1 class="ui center aligned header">Logg inn i appen</h1>
+      <div class="ui grid">
+        <div class="ui centered row">
+          <span class="padtext">Her kan du logge deg inn for å få tilgang til våre tjenester. Du logger deg inn med en kombinasjon av brukernavn og passord</span>
+        </div>
+      </div>
       <div class="list">
         <label class="item item-input item-floating-label">
           <span class="input-label">Brukernavn</span>
@@ -14,10 +19,7 @@
       </div>
       <div class="ui grid">
         <div class="ui centered row">
-          <button class="ui primary button" ng-click="login.login()">Logg inn (Funker ikke)</button>
-        </div>
-        <div class="ui centered row">
-          <button class="ui primary button" ui-sref="tab.home">Logg inn (Funker)</button>
+          <button class="ui primary button" ng-click="login.login()">Logg inn</button>
         </div>
       </div>
     </div>

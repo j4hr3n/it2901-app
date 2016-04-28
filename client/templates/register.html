@@ -1,29 +1,25 @@
 <ion-view view-title="Registrer deg" class="register">
   <ion-content>
-    <div class="ui container register">
+    <div class="ui container register" ng-controller="RegisterCtrl as register">
       <h1 class="ui center aligned header">Registrer deg i appen</h1>
       <div class="list">
         <label class="item item-input item-floating-label">
-          <span class="input-label">Navn</span>
-          <input type="text" ng-model="register.name" placeholder="Navn">
-        </label>
-        <label class="item item-input item-floating-label">
           <span class="input-label">Epost</span>
-          <input type="email" ng-model="register.email" placeholder="Epost">
+          <input type="email" ng-model="register.user.email" placeholder="Epost">
         </label>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">Telefonnummer</span>
-          <input type="tel" ng-model="register.tel" placeholder="Telfonnummer">
-        </label>
-        <label class="item item-input item-floating-label">
+        <!-- <label class="item item-input item-floating-label">
           <span class="input-label">Fødselsdato</span>
           <input type="date" ng-model="register.dob" ng-click="dateClicked()" placeholder="Fødselsdato">
           <span class="hackish-label" ng-show="dateIsClicked == false">Fødselsdato</span>
+        </label> -->
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Passord</span>
+          <input type="password" ng-minlength="5" ng-model="register.user.password" placeholder="Ditt passord">
         </label>
       </div>
       <div class="ui grid">
         <div class="ui centered row">
-          <button class="ui fluid button" ng-click="register()">Logg inn</button>
+          <button class="ui button" ng-click="register.registerNewUser()">Registrer bruker</button>
         </div>
       </div>
     </div>

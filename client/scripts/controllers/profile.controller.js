@@ -13,7 +13,10 @@ function ProfileCtrl($scope, $reactive, $ionicActionSheet, $cordovaCamera,
 		console.log("Edit now")
 		$scope.editing = true;
 		$state.go("tab.profile.edit");
-		document.getElementById('edit').scrollIntoView();
+		document.getElementById('edit').scrollIntoView({
+			block: "end",
+			behavior: "smooth"
+		});
 	}
 
 	$scope.addProfilePhoto = function() {
@@ -43,27 +46,25 @@ function ProfileCtrl($scope, $reactive, $ionicActionSheet, $cordovaCamera,
 				},
 				buttonClicked: function(index) {
 					console.log("Knapp trykket -->", index)
-					return true;
+					var options = {
+						quality: 50,
+						destinationType: Camera.DestinationType.DATA_URL,
+						sourceType: Camera.PictureSourceType.CAMERA,
+						allowEdit: true,
+						encodingType: Camera.EncodingType.JPEG,
+						targetWidth: 500,
+						targetHeight: 500,
+						popoverOptions: CameraPopoverOptions,
+						saveToPhotoAlbum: false,
+						correctOrientation: true
+					};
+
+					$cordovaCamera.getPicture(options).then(function(imageData) {
+						image.src = "data:image/jpeg;base64," + imageData;
+					}, function(err) {
+						console.log(err);
+					});
 				}
-			});
-
-			var options = {
-				quality: 50,
-				destinationType: Camera.DestinationType.DATA_URL,
-				sourceType: Camera.PictureSourceType.CAMERA,
-				allowEdit: true,
-				encodingType: Camera.EncodingType.JPEG,
-				targetWidth: 500,
-				targetHeight: 500,
-				popoverOptions: CameraPopoverOptions,
-				saveToPhotoAlbum: false,
-				correctOrientation: true
-			};
-
-			$cordovaCamera.getPicture(options).then(function(imageData) {
-				image.src = "data:image/jpeg;base64," + imageData;
-			}, function(err) {
-				console.log(err);
 			});
 		} else {
 			swal({

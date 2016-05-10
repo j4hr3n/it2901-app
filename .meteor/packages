@@ -20,10 +20,9 @@ driftyco:ionic
 momentjs:moment
 fourseven:scss
 fortawesome:fontawesome
-semantic:ui
-flemay:less-autoprefixer
 standard-minifier-css
 standard-minifier-js
 netanelgilad:ng-cordova
 patrickml:swal
 accounts-password
+semantic:ui-css

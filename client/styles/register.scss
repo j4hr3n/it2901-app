@@ -1,0 +1,40 @@
+$wet-asphalt: #34495e;
+
+.register{
+
+  height: 100vh;
+
+  .ui.container{
+    .ui.header{
+      color:white;
+    }
+  }
+
+  .ui.basic.segment{
+    background-color: transparent;
+    color:white;
+  }
+
+  .ui.segment{
+    background-color: transparentize(white, 0.75);
+    .list{
+      .input-label{
+        color: white !important;
+      }
+      input{
+        color: white !important;
+      }
+    }
+  }
+
+  > .layer{
+    height: 100vh !important;
+    background-color: transparentize($wet-asphalt, 0.35);
+  }
+
+  background: url("/img/register.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

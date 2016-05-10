@@ -8,7 +8,7 @@ function RegisterCtrl($scope, $reactive, $state) {
   $scope.dateIsClicked = false;
 
   this.user = { // This is converted into an order-sensitive argument list
-    'username': Math.random().toString(36).substring(7),
+    'username': '',
     'password': '',
     'email': '',
     'profilePicture': '',

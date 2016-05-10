@@ -1,15 +1,21 @@
 <ion-view view-title="Profil" class="profile">
-  <ion-content>
-    <div class="ui one column grid">
+  <ion-content delegate-handle="content">
+    <div class="ui one column grid" ng-controller="ProfileCtrl as prc">
       <div class="column">
         <div class="ui centered fluid card" id="user-card">
           <a class="image" ng-click="addProfilePhoto()">
-            <img src="{{user.image_url}}" id="profile-image">
+            <img src="{{prc.user.profile.profilePicture}}" id="profile-image">
           </a>
           <div class="content">
-            <a class="header" href="#">{{user.full_name}}</a>
+            <a class="header" href="#">{{prc.user.profile.nameFirst + " " + prc.user.profile.nameLast}}</a>
             <div class="meta">
-              <span class="date">{{user.date_of_birth}}</span>
+              <span class="date">{{prc.user.profile.bio}}</span>
+              <br/>
+              <p style="margin-top: 0.25em;">
+                <i class="user icon"></i>
+                <span>{{ prc.user.profile.friends.length }}
+                  venner</span>
+              </p>
             </div>
             <h3 class="ui sub header">
               Oversikt over din aktivitet
@@ -53,12 +59,16 @@
                       </div>
                     </div>
                   </div>
-                  <button class="fluid ui button" ng-click="edit()">Rediger profil</button>
+                  <div ng-switch="editing">
+
+                  <button ng-switch-when="false" class="fluid ui button" ng-click="edit(); scrollToAnchorWithinCurrentPage('edit')">Rediger profil</button>
+                  <button ng-switch-when="true" class="fluid ui button" ng-click="cancelEdit()" ui-sref="tab.profile">Avbryt</button>
+                </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id ="edit" ui-view></div>
+          <div id="edit" ui-view></div>
         </div>
       </div>
     </div>

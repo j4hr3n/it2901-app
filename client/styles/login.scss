@@ -1,4 +1,43 @@
+$wet-asphalt: #34495e;
+
 .login {
+
+  height: 100vh;
+
+  > .layer{
+    height: 100vh !important;
+    background-color: transparentize($wet-asphalt, 0.35);
+  }
+
+  background: url("/img/login.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .ui.container{
+    .ui.header{
+      color:white;
+    }
+  }
+
+  .ui.basic.segment{
+    background-color: transparent;
+    color:white;
+  }
+
+  .ui.segment{
+    background-color: transparentize(white, 0.75);
+    .list{
+      .input-label{
+        color: white !important;
+      }
+      input{
+        color: white !important;
+      }
+    }
+  }
+
   //Hide date input defaults
   input::-webkit-datetime-edit,
   input::-webkit-clear-button,

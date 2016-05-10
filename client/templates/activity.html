@@ -1,33 +1,42 @@
-<ion-view view-title="Aktiviteter">
-  <ion-content>
-    <div class="ui container activity">
-    <div class="list card">
-      <div class="ui styled fluid accordion">
-        <div ng-repeat="activity in activities">
-        <div class="title">
-          <i class="angle down icon"></i>
-          {{activity.title}}
-        </div>
-        <div class="content">
-          <p class="transition hidden">
-            {{activity.description}} <br/>
-          </p>
-          <div class="ui list" ng-repeat="exercise in activity.exercises">
-            <div class="item"><i class="treatment icon"></i>
-              <div class="content">
-                <div class="header">
-                {{exercise.repetitions}} x {{exercise.title}}
+<ion-view view-title="Aktiviteter" class="activity">
+  <ion-content class="layer">
+    <div class="ui container" style="margin-top:5em;" ng-controller="ActivityCtrl as activity">
+      <h1 class="ui center aligned header">Se dine aktiviteter</h1>
+      <div class="ui basic center aligned segment">
+        Her kan du se dine aktiviteter, og åpne aktiviteter du kan delta på.
+      </div>
+      <div class="list card">
+        <div class="ui fluid accordion">
+          <div ng-repeat="event in activity.userEvents">
+            <div class="title">
+              <i class="dropdown icon"></i>
+              <i class="calendar icon"></i>
+              {{event.name}}
+              <span ng-if="event.date">{{event.date}}</span>
+            </div>
+            <div class="content">
+              <p ng-if="event.date">
+                Dato:
+                {{event.date | date}}
+                <br/>
+              </p>
+              <p ng-if="event.location">
+                Lokasjon:
+                {{event.location}}
+              </p>
+              <p ng-if="event.description">
+                Beskrivelse:
+                {{event.description}}
+              </p>
+              <div ng-if="event.owner != activity.user._id">
+                <button class="ui green small button dosmtn" ng-click="acceptEvent(event._id,true)" id="{{event._id}}" ng-show="!event.attending">Aksepter</button>
+                <label class="ui green label" ng-show="{{ event.attending }}">You are going.</label>
+                <button class="ui red small button" ng-click="acceptEvent(event._id,false)" id="event._id">Avvis</button>
               </div>
-              <div class="description">
-                {{exercise.description}}
-              </div>
-              </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </ion-content>
 </ion-view>

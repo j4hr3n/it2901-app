@@ -4,3 +4,30 @@
 * {
   font-family: 'Lato', sans-serif;
 }
+
+//Persist some font sizes
+.tab-item{
+  font-size: 10px !important;
+  i{
+    font-size: xx-large !important;
+  }
+}
+
+h1{
+  font-size: 2rem !important;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #DADADA !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #DADADA !important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #DADADA !important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #DADADA !important;
+}

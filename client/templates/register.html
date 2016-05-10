@@ -1,11 +1,19 @@
 <ion-view view-title="Registrer deg" class="register">
-  <ion-content>
-    <div class="ui container register" ng-controller="RegisterCtrl as register">
-      <h1 class="ui center aligned header">Registrer deg i appen</h1>
+  <ion-content class="layer">
+    <div class="ui container" ng-controller="RegisterCtrl as register">
+      <h1 class="ui center aligned header" style="margin-top:0.25em;">Registrer deg i appen</h1>
+      <div class="ui basic center aligned segment">
+        Her kan du registere deg som bruker for å få tilgang til våre tjenester. Legg merke til at alle felter i registreringen er påkrevd
+      </div>
+      <div class="ui raised segment">
       <div class="list">
         <label class="item item-input item-floating-label">
-          <span class="input-label">Epost</span>
-          <input type="email" ng-model="register.user.email" placeholder="Epost">
+          <span class="input-label">Brukernavn *</span>
+          <input type="text" ng-model="register.user.username" placeholder="Brukernavn *">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Epost *</span>
+          <input type="email" ng-model="register.user.email" placeholder="Epost *">
         </label>
         <!-- <label class="item item-input item-floating-label">
           <span class="input-label">Fødselsdato</span>
@@ -13,14 +21,15 @@
           <span class="hackish-label" ng-show="dateIsClicked == false">Fødselsdato</span>
         </label> -->
         <label class="item item-input item-floating-label">
-          <span class="input-label">Passord</span>
-          <input type="password" ng-minlength="5" ng-model="register.user.password" placeholder="Ditt passord">
+          <span class="input-label">Passord *</span>
+          <input type="password" ng-minlength="5" ng-model="register.user.password" placeholder="Minst 5 tegn">
         </label>
       </div>
       <div class="ui grid">
         <div class="ui centered row">
-          <button class="ui button" ng-click="register.registerNewUser()">Registrer bruker</button>
+          <button class="ui green button" ng-click="register.registerNewUser()">Registrer bruker</button>
         </div>
+      </div>
       </div>
     </div>
   </ion-content>

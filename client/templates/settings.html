@@ -22,24 +22,18 @@
           </div>
         </div>
         <div class="ui divider"></div>
-        <h1 class="ui center aligned header">Togglbare instillinger</h1>
-        <ion-toggle>
-          Toggle meg
-        </ion-toggle>
-        <ion-toggle>
-          Her vil det komme instillinger
-        </ion-toggle>
-        <ion-toggle>
-          De kan ofte toggles
-        </ion-toggle>
-        <div class="ui divider"></div>
-        <h1 class="ui center aligned header">Eller kanskje tweakes som under?</h1>
+        <h1 class="ui center aligned header">Endre tekststørrelse</h1>
         <div class="list">
           <div class="item range range-positive">
-            <i class="icon ion-ios-sunny-outline"></i>
-            <input type="range" name="volume" min="0" max="100" value="33">
-            <i class="icon ion-ios-sunny"></i>
+            <i class="icon ion-minus"></i>
+            <input type="range" name="volume" min="98" max="102" value="100" ng-model="fontSize" ng-change="changeFontSize(fontSize)">
+            <i class="icon ion-plus"></i>
           </div>
+        </div>
+        <div class="ui divider"></div>
+        <h1 class="ui center aligned header">Faresone</h1>
+        <div class="ui one column centered grid">
+          <a ng-click="logout()" style="margin-top: 1rem;"><button class="ui red button">Logg ut</button></a>
         </div>
       </div>
     </div>

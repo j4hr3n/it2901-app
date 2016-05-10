@@ -3,21 +3,95 @@ angular
 	.controller('ProfileCtrl', ProfileCtrl);
 
 function ProfileCtrl($scope, $reactive, $ionicActionSheet, $cordovaCamera,
-	$cordovaDialogs, $state) {
+	$cordovaDialogs, $state, $location, $anchorScroll, $ionicScrollDelegate) {
 	$reactive(this).attach($scope);
 
-
 	$scope.editing = false;
+
+	if (!Meteor.user()) {
+		$state.go("noauth");
+		throw new Meteor.Error(403,
+			"Need to be logged in to access your own profile.");
+	}
+
+	this.helpers({
+		user: () => {
+			return Meteor.user();
+		},
+		contacts: () => {
+			return Meteor.users.find({}, {
+				'username': 1
+			});
+		},
+
+		friends: () => {
+			user = Meteor.user();
+			return user.profile.friends;
+
+		},
+
+
+		notifications: () => {
+			user = Meteor.user();
+			return user.profile.nameFirst;
+
+			//user.profile.notifications.friendRequest.info.length
+		},
+
+	});
 
 	$scope.edit = function() {
 		console.log("Edit now")
 		$scope.editing = true;
 		$state.go("tab.profile.edit");
-		document.getElementById('edit').scrollIntoView({
-			block: "end",
-			behavior: "smooth"
-		});
 	}
+
+	$scope.cancelEdit = function() {
+		$scope.editing = false;
+	}
+
+	$scope.scrollToAnchorWithinCurrentPage = function(anchor) {
+		$location.hash(anchor);
+		var handle = $ionicScrollDelegate.$getByHandle('content');
+		handle.anchorScroll();
+	};
+
+	this.updateInfo = () => {
+
+		if (this.edit.user.profile) {
+			Meteor.users.update({
+				_id: this.user._id
+			}, {
+				$set: {
+					"profile.nameFirst": this.edit.user.profile.nameFirst || this.user.profile
+						.nameFirst,
+					"profile.nameLast": this.edit.user.profile.nameLast || this.user.profile
+						.nameLast,
+					"profile.friends": this.edit.user.profile.friends || this.user.profile.friends,
+					"profile.bio": this.edit.user.profile.bio || this.user.profile.bio
+				}
+			})
+		}
+
+		if (this.edit.user.nyttpassord) {
+			Meteor.call('endrePassord', this.edit.user.nyttpassord, function(err,
+				result) {
+				if (!err) {
+					swal('Suksess',
+						'Ditt passord er nå endret, husk å bruke det nye passordet neste gang du logger inn.',
+						"success")
+				} else {
+					swal('Noe gikk galt',
+						'Vi klarte dessverre ikke å endre passordet ditt, prøv gjerne på nytt.',
+						"error")
+				}
+			})
+		}
+
+		$scope.editing = false;
+		$state.go("tab.profile");
+
+	};
 
 	$scope.addProfilePhoto = function() {
 		if (Meteor.isCordova) {

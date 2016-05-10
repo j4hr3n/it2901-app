@@ -1,12 +1,11 @@
 <ion-view view-title="Logg inn" class="login">
-  <ion-content>
-    <div class="ui container login" ng-controller="LoginCtrl as login">
+  <ion-content class="layer">
+    <div class="ui container" ng-controller="LoginCtrl as login">
       <h1 class="ui center aligned header">Logg inn i appen</h1>
-      <div class="ui grid">
-        <div class="ui centered row">
-          <span class="padtext">Her kan du logge deg inn for å få tilgang til våre tjenester. Du logger deg inn med en kombinasjon av brukernavn og passord</span>
+        <div class="ui ui basic center aligned segment">
+          Her kan du logge deg inn for å få tilgang til våre tjenester. Du logger deg inn med en kombinasjon av brukernavn og passord
         </div>
-      </div>
+      <div class="ui raised segment">
       <div class="list">
         <label class="item item-input item-floating-label">
           <span class="input-label">Brukernavn</span>
@@ -23,5 +22,6 @@
         </div>
       </div>
     </div>
+  </div>
   </ion-content>
 </ion-view>

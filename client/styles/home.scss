@@ -1,27 +1,24 @@
 $wet-asphalt: #34495e;
 
-.noauth{
+.home{
   height: 100vh;
   width: 100vw;
-  > .layer{
+  .layer{
     height: 100vh;
-    width: 100vw;
     background-color: transparentize($wet-asphalt, 0.35);
+    background-size: cover;
   }
 
-  background: url("/img/noauth.jpeg") no-repeat center center fixed;
+  .ui.container{
+    .ui.header{
+      color:white;
+    }
+    color: white;
+  }
+
+  background: url("/img/home.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  .ui.container{
-    color: white;
-  }
-  .ui.header{
-    color: white;
-    margin-top: 0.5em;
-  }
-  .padtext{
-    padding: 0.5 1.5em 1em !important;
-  }
 }

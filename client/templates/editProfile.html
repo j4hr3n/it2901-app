@@ -1,26 +1,26 @@
-<div id="edit" class="ui container">
+<div id="edit" class="ui container" ng-controller="ProfileCtrl as prc">
   <form class="ui form" name="edit-form">
     <div class="field">
       <label>Fornavn</label>
-      <input type="text" ng-model="edit.first_name" placeholder="Ola">
+      <input type="text" ng-model="prc.edit.user.profile.nameFirst" placeholder="Ola">
     </div>
     <div class="field">
       <label>Etternavn</label>
-      <input type="text" ng-model="edit.last_name" placeholder="Nordmann">
+      <input type="text" ng-model="prc.edit.user.profile.nameLast" placeholder="Nordmann">
     </div>
     <div class="field">
-      <label>Epost</label>
-      <input type="email" ng-model="edit.email" placeholder="Ola.Nordmann@eksempel.no">
+      <label>Passord</label>
+      <input type="password" ng-minlength="5" ng-model="prc.edit.user.nyttpassord" placeholder="Nytt passord, minst 5 tegn">
     </div>
     <div class="field">
-      <label>Telefonnummer</label>
-      <input type="tel" ng-model="edit.phone" placeholder="12345678">
+      <label>Bio</label>
+      <textarea rows="2" ng-model="prc.edit.user.profile.bio"></textarea>
     </div>
     <div class="bottompad">
-      <button class="ui button" type="submit">
+      <button class="ui button" ui-sref="tab.profile">
         <i class="fa fa-times"></i>
         Avbryt</button>
-      <button class="ui button" type="submit">
+      <button class="ui button" ng-click="prc.updateInfo()">
         <i class="fa fa-floppy-o"></i>
         Lagre</button>
     </div>
